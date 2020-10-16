@@ -76,13 +76,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.fd.proto.StudentProto.internal_static_com_fd_proto_MyRequest_descriptor;
+    return StudentProto.internal_static_com_fd_proto_MyRequest_descriptor;
   }
 
   @Override
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.fd.proto.StudentProto.internal_static_com_fd_proto_MyRequest_fieldAccessorTable
+    return StudentProto.internal_static_com_fd_proto_MyRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             MyRequest.class, Builder.class);
   }
@@ -285,16 +285,16 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.fd.proto.MyRequest)
-      com.fd.proto.MyRequestOrBuilder {
+      MyRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.fd.proto.StudentProto.internal_static_com_fd_proto_MyRequest_descriptor;
+      return StudentProto.internal_static_com_fd_proto_MyRequest_descriptor;
     }
 
     @Override
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.fd.proto.StudentProto.internal_static_com_fd_proto_MyRequest_fieldAccessorTable
+      return StudentProto.internal_static_com_fd_proto_MyRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               MyRequest.class, Builder.class);
     }
@@ -325,7 +325,7 @@ private static final long serialVersionUID = 0L;
     @Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.fd.proto.StudentProto.internal_static_com_fd_proto_MyRequest_descriptor;
+      return StudentProto.internal_static_com_fd_proto_MyRequest_descriptor;
     }
 
     @Override

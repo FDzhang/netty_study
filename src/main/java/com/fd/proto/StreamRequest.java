@@ -4,26 +4,26 @@
 package com.fd.proto;
 
 /**
- * Protobuf type {@code com.fd.proto.MyResponse}
+ * Protobuf type {@code com.fd.proto.StreamRequest}
  */
-public final class MyResponse extends
+public final class StreamRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.fd.proto.MyResponse)
-    MyResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:com.fd.proto.StreamRequest)
+    StreamRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use MyResponse.newBuilder() to construct.
-  private MyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use StreamRequest.newBuilder() to construct.
+  private StreamRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private MyResponse() {
-    realname_ = "";
+  private StreamRequest() {
+    requestInfo_ = "";
   }
 
   @Override
   @SuppressWarnings({"unused"})
   protected Object newInstance(
       UnusedPrivateParameter unused) {
-    return new MyResponse();
+    return new StreamRequest();
   }
 
   @Override
@@ -31,7 +31,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private MyResponse(
+  private StreamRequest(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -49,10 +49,10 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 18: {
+          case 10: {
             String s = input.readStringRequireUtf8();
 
-            realname_ = s;
+            requestInfo_ = s;
             break;
           }
           default: {
@@ -76,49 +76,49 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return StudentProto.internal_static_com_fd_proto_MyResponse_descriptor;
+    return StudentProto.internal_static_com_fd_proto_StreamRequest_descriptor;
   }
 
   @Override
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return StudentProto.internal_static_com_fd_proto_MyResponse_fieldAccessorTable
+    return StudentProto.internal_static_com_fd_proto_StreamRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            MyResponse.class, Builder.class);
+            StreamRequest.class, Builder.class);
   }
 
-  public static final int REALNAME_FIELD_NUMBER = 2;
-  private volatile Object realname_;
+  public static final int REQUEST_INFO_FIELD_NUMBER = 1;
+  private volatile Object requestInfo_;
   /**
-   * <code>string realname = 2;</code>
-   * @return The realname.
+   * <code>string request_info = 1;</code>
+   * @return The requestInfo.
    */
   @Override
-  public String getRealname() {
-    Object ref = realname_;
+  public String getRequestInfo() {
+    Object ref = requestInfo_;
     if (ref instanceof String) {
       return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       String s = bs.toStringUtf8();
-      realname_ = s;
+      requestInfo_ = s;
       return s;
     }
   }
   /**
-   * <code>string realname = 2;</code>
-   * @return The bytes for realname.
+   * <code>string request_info = 1;</code>
+   * @return The bytes for requestInfo.
    */
   @Override
   public com.google.protobuf.ByteString
-      getRealnameBytes() {
-    Object ref = realname_;
+      getRequestInfoBytes() {
+    Object ref = requestInfo_;
     if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (String) ref);
-      realname_ = b;
+      requestInfo_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -139,8 +139,8 @@ private static final long serialVersionUID = 0L;
   @Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getRealnameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, realname_);
+    if (!getRequestInfoBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestInfo_);
     }
     unknownFields.writeTo(output);
   }
@@ -151,8 +151,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getRealnameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, realname_);
+    if (!getRequestInfoBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestInfo_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -164,13 +164,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof MyResponse)) {
+    if (!(obj instanceof StreamRequest)) {
       return super.equals(obj);
     }
-    MyResponse other = (MyResponse) obj;
+    StreamRequest other = (StreamRequest) obj;
 
-    if (!getRealname()
-        .equals(other.getRealname())) return false;
+    if (!getRequestInfo()
+        .equals(other.getRequestInfo())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -182,76 +182,76 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + REALNAME_FIELD_NUMBER;
-    hash = (53 * hash) + getRealname().hashCode();
+    hash = (37 * hash) + REQUEST_INFO_FIELD_NUMBER;
+    hash = (53 * hash) + getRequestInfo().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static MyResponse parseFrom(
+  public static StreamRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static MyResponse parseFrom(
+  public static StreamRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static MyResponse parseFrom(
+  public static StreamRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static MyResponse parseFrom(
+  public static StreamRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static MyResponse parseFrom(byte[] data)
+  public static StreamRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static MyResponse parseFrom(
+  public static StreamRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static MyResponse parseFrom(java.io.InputStream input)
+  public static StreamRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static MyResponse parseFrom(
+  public static StreamRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static MyResponse parseDelimitedFrom(java.io.InputStream input)
+  public static StreamRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static MyResponse parseDelimitedFrom(
+  public static StreamRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static MyResponse parseFrom(
+  public static StreamRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static MyResponse parseFrom(
+  public static StreamRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -264,7 +264,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(MyResponse prototype) {
+  public static Builder newBuilder(StreamRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @Override
@@ -280,26 +280,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.fd.proto.MyResponse}
+   * Protobuf type {@code com.fd.proto.StreamRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.fd.proto.MyResponse)
-      MyResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:com.fd.proto.StreamRequest)
+      com.fd.proto.StreamRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return StudentProto.internal_static_com_fd_proto_MyResponse_descriptor;
+      return StudentProto.internal_static_com_fd_proto_StreamRequest_descriptor;
     }
 
     @Override
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return StudentProto.internal_static_com_fd_proto_MyResponse_fieldAccessorTable
+      return StudentProto.internal_static_com_fd_proto_StreamRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MyResponse.class, Builder.class);
+              StreamRequest.class, Builder.class);
     }
 
-    // Construct using com.fd.proto.MyResponse.newBuilder()
+    // Construct using com.fd.proto.StreamRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -317,7 +317,7 @@ private static final long serialVersionUID = 0L;
     @Override
     public Builder clear() {
       super.clear();
-      realname_ = "";
+      requestInfo_ = "";
 
       return this;
     }
@@ -325,17 +325,17 @@ private static final long serialVersionUID = 0L;
     @Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return StudentProto.internal_static_com_fd_proto_MyResponse_descriptor;
+      return StudentProto.internal_static_com_fd_proto_StreamRequest_descriptor;
     }
 
     @Override
-    public MyResponse getDefaultInstanceForType() {
-      return MyResponse.getDefaultInstance();
+    public StreamRequest getDefaultInstanceForType() {
+      return StreamRequest.getDefaultInstance();
     }
 
     @Override
-    public MyResponse build() {
-      MyResponse result = buildPartial();
+    public StreamRequest build() {
+      StreamRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -343,9 +343,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @Override
-    public MyResponse buildPartial() {
-      MyResponse result = new MyResponse(this);
-      result.realname_ = realname_;
+    public StreamRequest buildPartial() {
+      StreamRequest result = new StreamRequest(this);
+      result.requestInfo_ = requestInfo_;
       onBuilt();
       return result;
     }
@@ -384,18 +384,18 @@ private static final long serialVersionUID = 0L;
     }
     @Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof MyResponse) {
-        return mergeFrom((MyResponse)other);
+      if (other instanceof StreamRequest) {
+        return mergeFrom((StreamRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(MyResponse other) {
-      if (other == MyResponse.getDefaultInstance()) return this;
-      if (!other.getRealname().isEmpty()) {
-        realname_ = other.realname_;
+    public Builder mergeFrom(StreamRequest other) {
+      if (other == StreamRequest.getDefaultInstance()) return this;
+      if (!other.getRequestInfo().isEmpty()) {
+        requestInfo_ = other.requestInfo_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -413,11 +413,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      MyResponse parsedMessage = null;
+      StreamRequest parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (MyResponse) e.getUnfinishedMessage();
+        parsedMessage = (StreamRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -427,78 +427,78 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private Object realname_ = "";
+    private Object requestInfo_ = "";
     /**
-     * <code>string realname = 2;</code>
-     * @return The realname.
+     * <code>string request_info = 1;</code>
+     * @return The requestInfo.
      */
-    public String getRealname() {
-      Object ref = realname_;
+    public String getRequestInfo() {
+      Object ref = requestInfo_;
       if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         String s = bs.toStringUtf8();
-        realname_ = s;
+        requestInfo_ = s;
         return s;
       } else {
         return (String) ref;
       }
     }
     /**
-     * <code>string realname = 2;</code>
-     * @return The bytes for realname.
+     * <code>string request_info = 1;</code>
+     * @return The bytes for requestInfo.
      */
     public com.google.protobuf.ByteString
-        getRealnameBytes() {
-      Object ref = realname_;
+        getRequestInfoBytes() {
+      Object ref = requestInfo_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (String) ref);
-        realname_ = b;
+        requestInfo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string realname = 2;</code>
-     * @param value The realname to set.
+     * <code>string request_info = 1;</code>
+     * @param value The requestInfo to set.
      * @return This builder for chaining.
      */
-    public Builder setRealname(
+    public Builder setRequestInfo(
         String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      realname_ = value;
+      requestInfo_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string realname = 2;</code>
+     * <code>string request_info = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearRealname() {
+    public Builder clearRequestInfo() {
       
-      realname_ = getDefaultInstance().getRealname();
+      requestInfo_ = getDefaultInstance().getRequestInfo();
       onChanged();
       return this;
     }
     /**
-     * <code>string realname = 2;</code>
-     * @param value The bytes for realname to set.
+     * <code>string request_info = 1;</code>
+     * @param value The bytes for requestInfo to set.
      * @return This builder for chaining.
      */
-    public Builder setRealnameBytes(
+    public Builder setRequestInfoBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      realname_ = value;
+      requestInfo_ = value;
       onChanged();
       return this;
     }
@@ -515,41 +515,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.fd.proto.MyResponse)
+    // @@protoc_insertion_point(builder_scope:com.fd.proto.StreamRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:com.fd.proto.MyResponse)
-  private static final MyResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:com.fd.proto.StreamRequest)
+  private static final StreamRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new MyResponse();
+    DEFAULT_INSTANCE = new StreamRequest();
   }
 
-  public static MyResponse getDefaultInstance() {
+  public static StreamRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<MyResponse>
-      PARSER = new com.google.protobuf.AbstractParser<MyResponse>() {
+  private static final com.google.protobuf.Parser<StreamRequest>
+      PARSER = new com.google.protobuf.AbstractParser<StreamRequest>() {
     @Override
-    public MyResponse parsePartialFrom(
+    public StreamRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new MyResponse(input, extensionRegistry);
+      return new StreamRequest(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<MyResponse> parser() {
+  public static com.google.protobuf.Parser<StreamRequest> parser() {
     return PARSER;
   }
 
   @Override
-  public com.google.protobuf.Parser<MyResponse> getParserForType() {
+  public com.google.protobuf.Parser<StreamRequest> getParserForType() {
     return PARSER;
   }
 
   @Override
-  public MyResponse getDefaultInstanceForType() {
+  public StreamRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
