@@ -28,7 +28,7 @@ protobuf {
     protoc {
         artifact = "com.google.protobuf:protoc:3.12.0"
     }
-    generatedFilesBaseDir = "$projectDir/src/generated"
+    generatedFilesBaseDir = "$projectDir/src"
     plugins {
         grpc {
             artifact = 'io.grpc:protoc-gen-grpc-java:1.32.1'
