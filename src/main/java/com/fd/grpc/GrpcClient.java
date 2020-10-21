@@ -23,9 +23,9 @@ public class GrpcClient {
         StudentServiceGrpc.StudentServiceStub stub = StudentServiceGrpc.newStub(managedChannel);
 
 
-//        MyResponse myResponse =
-//                blockingStub.getRealNameByUsername(MyRequest.newBuilder().setUsername("wk").build());
-//        System.out.println(myResponse.getRealname());
+        MyResponse myResponse =
+                blockingStub.getRealNameByUsername(MyRequest.newBuilder().setUsername("wk").build());
+        System.out.println(myResponse.getRealname());
 //
 //
 //        System.out.println("----------------");
@@ -77,39 +77,39 @@ public class GrpcClient {
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
-
-
-        StreamObserver<StreamRequest> requestStreamObserver = stub.biTalk(new StreamObserver<StreamResponse>() {
-            @Override
-            public void onNext(StreamResponse value) {
-                System.out.println(value.getResponseInfo());
-            }
-
-            @Override
-            public void onError(Throwable t) {
-                System.out.println(t.getMessage());
-            }
-
-            @Override
-            public void onCompleted() {
-                System.out.println("onCompleted");
-            }
-        });
-
-        for (int i = 0; i < 10; i++) {
-            requestStreamObserver.onNext(
-                    StreamRequest.newBuilder().setRequestInfo(LocalDateTime.now().toString()).build()
-            );
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        try {
-            Thread.sleep(50000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//
+//
+//        StreamObserver<StreamRequest> requestStreamObserver = stub.biTalk(new StreamObserver<StreamResponse>() {
+//            @Override
+//            public void onNext(StreamResponse value) {
+//                System.out.println(value.getResponseInfo());
+//            }
+//
+//            @Override
+//            public void onError(Throwable t) {
+//                System.out.println(t.getMessage());
+//            }
+//
+//            @Override
+//            public void onCompleted() {
+//                System.out.println("onCompleted");
+//            }
+//        });
+//
+//        for (int i = 0; i < 10; i++) {
+//            requestStreamObserver.onNext(
+//                    StreamRequest.newBuilder().setRequestInfo(LocalDateTime.now().toString()).build()
+//            );
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        try {
+//            Thread.sleep(50000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
     }
 }
