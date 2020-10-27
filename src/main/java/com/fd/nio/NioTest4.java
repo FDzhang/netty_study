@@ -22,6 +22,7 @@ public class NioTest4 {
 
         while (true){
             byteBuffer.clear();
+            byteBuffer.compact();
 
             int read = inputStreamChannel.read(byteBuffer);
 
