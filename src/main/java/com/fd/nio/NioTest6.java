@@ -18,7 +18,7 @@ public class NioTest6 {
 
         buffer.position(2);
         buffer.limit(6);
-
+        // slice 和 buffer 共享相同的底层数组
         ByteBuffer slice = buffer.slice();
 
         for (int i = 0; i < slice.capacity(); i++) {
